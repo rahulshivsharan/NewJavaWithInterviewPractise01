@@ -29,7 +29,7 @@ public class FilterEmployeesOnSalaryMain {
 			
 			System.out.println("----------------------------------------\n");
 			
-			filteredEmployee = empList.stream().filter(isSalaryGreaterThan).filter(isAgeGreaterThanForty).collect(Collectors.toList());
+			filteredEmployee = empList.stream().filter(isSalaryGreaterThan.and(isAgeGreaterThanForty)).collect(Collectors.toList());
 			filteredEmployee.forEach(System.out::println);
 			
 		}catch(Exception e) {
