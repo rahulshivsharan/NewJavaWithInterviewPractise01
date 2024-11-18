@@ -7,11 +7,10 @@ import java.util.stream.Collectors;
 public class InterviewQuestionMain {
 	
 	private static boolean divisibleByTens(long num) {
-		boolean isResultFound = false;
-		int divisor = 10;
+		boolean isResultFound = false;		
 		do {
-			num /=divisor;			
-			if(num > divisor) {				
+			num =  (num / 10);			
+			if(num > 10) {				
 				continue;
 			}else{
 				isResultFound = true;				
