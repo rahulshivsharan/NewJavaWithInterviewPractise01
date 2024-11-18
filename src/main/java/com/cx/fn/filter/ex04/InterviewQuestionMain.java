@@ -14,8 +14,7 @@ public class InterviewQuestionMain {
 			if(num > divisor) {				
 				continue;
 			}else{
-				isResultFound = true;
-				break;
+				isResultFound = true;				
 			}
 		}while(isResultFound == false);
 		
