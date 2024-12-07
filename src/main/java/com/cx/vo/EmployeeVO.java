@@ -7,6 +7,7 @@ public class EmployeeVO implements Serializable{
 	private String employeeName;
 	private Integer employeeAge;
 	private Double salary;
+	private DepartmentVO department;
 	
 	public EmployeeVO() {}
 	
@@ -15,6 +16,14 @@ public class EmployeeVO implements Serializable{
 		this.employeeName = name;
 		this.employeeAge = age;
 		this.salary = salary;
+	}
+	
+	public EmployeeVO(Integer id, String name, Integer age, Double salary, DepartmentVO dept) {
+		this.employeeId = id;
+		this.employeeName = name;
+		this.employeeAge = age;
+		this.salary = salary;
+		this.department = dept;
 	}
 	
 	public Integer getEmployeeId() {
@@ -38,8 +47,17 @@ public class EmployeeVO implements Serializable{
 	public Double getSalary() {
 		return salary;
 	}
+	
 	public void setSalary(Double salary) {
 		this.salary = salary;
+	}
+	
+	public DepartmentVO getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(DepartmentVO department) {
+		this.department = department;
 	}
 	
 	@Override
@@ -49,8 +67,20 @@ public class EmployeeVO implements Serializable{
 			.append("\", name \"").append(this.employeeName)
 			.append("\", age \"").append(this.employeeAge)
 			.append("\", salary \"").append(this.salary)
+			.append("\", Department \"").append(this.department)
 			.append("\n");
 		
 		return strb.toString();
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		EmployeeVO vo = (EmployeeVO) o;
+		return (vo.getEmployeeId() == this.getEmployeeId());
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getEmployeeId();
 	}
 }
