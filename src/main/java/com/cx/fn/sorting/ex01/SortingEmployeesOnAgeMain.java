@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 import com.cx.vo.EmployeeVO;
 
+/**
+ * Sort the list of employees by age
+ */
 public class SortingEmployeesOnAgeMain {
 
 	public static void main(String[] args) {
