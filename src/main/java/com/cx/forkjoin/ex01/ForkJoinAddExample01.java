@@ -8,7 +8,7 @@ public class ForkJoinAddExample01 {
 
 	public static void main(String[] args) {
 		try {
-			long result = ForkJoinAdd.startForkJoinSum(5);
+			long result = ForkJoinAdd.startForkJoinSum(50);
 			System.out.println(result);
 		}catch(Exception e) {
 			e.printStackTrace();
