@@ -1,5 +1,7 @@
 package com.cx.fn.interview.ex12;
 
+import java.util.Objects;
+
 public class CustomerVO {
 	private String name;
 	private Integer id;
@@ -13,19 +15,19 @@ public class CustomerVO {
 	
 	@Override
 	public int hashCode() {
-		int code = this.id * 31;
-		return code;
+		return Objects.hash(this.id);
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		CustomerVO customer = (CustomerVO) obj;
-		
-		if(this.getId() == customer.getId()) {
+		if(this == obj)
 			return true;
-		}
 		
-		return false;
+		if(obj == null || getClass() != obj.getClass())
+			return false;
+		
+		CustomerVO that = (CustomerVO) obj;		
+		return Objects.equals(this.getId(), that.getId());
 	}
 	
 	@Override
