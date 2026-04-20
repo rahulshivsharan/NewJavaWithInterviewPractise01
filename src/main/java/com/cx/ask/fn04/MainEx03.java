@@ -9,8 +9,7 @@ public class MainEx03 {
 			return TailCalls.done(accumulator);
 		}
 		
-		TailCall<Long> fn = () -> {
-			System.out.println("accumulator "+accumulator+", number "+n);
+		TailCall<Long> fn = () -> {			
 			return MainEx03.factorial(n - 1, n * accumulator);
 		}; 
 		

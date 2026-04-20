@@ -6,7 +6,7 @@ public class TailCalls {
 		
 		return new TailCall<T>() {
 			@Override
-			public TailCall<T> apply() {			
+			public TailCall<T> apply() {
 				throw new Error("Already finished");
 			}
 			
