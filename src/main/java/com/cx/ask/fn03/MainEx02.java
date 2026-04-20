@@ -11,7 +11,7 @@ public class MainEx02 {
 	 * @return
 	 */
 	private static Integer calculateFactorial (Integer num) {
-		return (num >= 1) ? num * calculateFactorial(--num) : 1;
+		return (num >= 1) ? num * MainEx02.calculateFactorial(--num) : 1;
 	}
 	
 	/**
