@@ -6,8 +6,10 @@ public class MainEx01 {
 
 	public static void main(String[] args) {
 		try {
-			Function<Integer, Integer> func = Summation::getSummationOf;			
-			System.out.println(func.apply(5));
+			int num = 5;
+			Function<Integer, Integer> func = Summation::getSummationOf;
+			
+			System.out.println("Summation of number "+num+" is "+func.apply(num));
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
