@@ -21,7 +21,7 @@ public class MathOperation {
 			
 		};
 		
-		return tailcall;
+		return TailCalls.call(tailcall);
 	}
 	
 	/*
@@ -50,6 +50,6 @@ public class MathOperation {
 			
 		};
 		
-		return tailcall;
+		return TailCalls.call(tailcall);
 	}
 }

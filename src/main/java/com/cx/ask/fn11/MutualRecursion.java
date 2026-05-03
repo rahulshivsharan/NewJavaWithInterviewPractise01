@@ -19,7 +19,7 @@ public class MutualRecursion {
 			return MutualRecursion.isOdd(num - 1);
 		};
 		
-		return tailCall;
+		return TailCalls.call(tailCall);
 	}
 	
 	/*
@@ -34,6 +34,6 @@ public class MutualRecursion {
 			return MutualRecursion.isEven(num - 1);
 		};
 		
-		return tailCall;
+		return TailCalls.call(tailCall);
 	}
 }
