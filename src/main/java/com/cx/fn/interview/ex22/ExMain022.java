@@ -5,10 +5,27 @@ import java.util.function.Function;
 
 public class ExMain022 {
 
+	private static Integer logAndReturn(Integer value) {		
+		try {
+			System.out.println("1. hello "+value);
+			Thread.sleep(1000L);
+			System.out.println("2. hello "+value);
+		}catch(InterruptedException ignoreEx) {
+			
+		}
+		return value;
+	}
+
+	
+	private static boolean filterFn(Integer num) {
+		System.out.println("Filtering num "+num);
+		return (num > 5);
+	}
+	
 	public static void main(String[] args) {
 		try {
-			//first();
-			second();
+			first();
+			//second();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -134,22 +151,6 @@ public class ExMain022 {
 									   .orElse(null);
 		
 		System.out.println("Result: "+res);
-	}
+	}	
 	
-	private static Integer logAndReturn(Integer value) {		
-		try {
-			System.out.println("1. hello "+value);
-			Thread.sleep(1000L);
-			System.out.println("2. hello "+value);
-		}catch(InterruptedException ignoreEx) {
-			
-		}
-		return value;
-	}
-
-	
-	private static boolean filterFn(Integer num) {
-		System.out.println("Filtering num "+num);
-		return (num > 5);
-	}
 }
